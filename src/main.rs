@@ -1,3 +1,16 @@
+#[derive(Debug)]
+struct pod<'a>{
+    name:&'a str
+}
+impl pod<'_> {
+    fn baoming(s:&str)->pod{
+        let p= pod{name:s};
+        println!("{:#?}",p);
+        p
+    }
+}
+
+
 fn main() {
     println!("Hello, world!");
     let ye =String::from("hello");
@@ -10,4 +23,7 @@ fn main() {
         }
     }
     println!("{}",big(ye.as_str(),lee))
+
+
+
 }
